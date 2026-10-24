@@ -28,7 +28,7 @@
   </a>
   <nav aria-label="Primary">
     <a href="#lore">Dogma</a>
-    <a href="#gallery">Etchings</a>
+    <a href="#previews">Previews</a>
     <a href="#oneofone">Prime</a>
     <a href="#flame">Flame</a>
     <a href="#mint">Join</a>
@@ -45,7 +45,7 @@
       <p class="lede" data-site="tagline">Bitcoin skulls, etched into the Divine.</p>
       <div class="cta">
         <a class="btn primary" href="#lore">Read the Dogma</a>
-        <a class="btn" href="#gallery">See the 221 etchings</a>
+        <a class="btn" href="#previews">See the previews</a>
       </div>
       <dl class="stats">
         <div><dt>Etchings</dt><dd id="statSupply">221</dd></div>
@@ -57,8 +57,6 @@
       <img src="/img/featured-1of1.jpg" width="1024" height="1024" alt="The Prime Skull: a geometric skull with a Bitcoin coin on its brow, inside a ringed border" fetchpriority="high">
     </div>
   </section>
-
-  <div class="strip" aria-hidden="true"><div class="strip-track" id="stripTrack"></div></div>
 
   <!-- LORE -->
   <section class="lore" id="lore">
@@ -100,20 +98,35 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="gallery" id="gallery">
-    <div class="gallery-head">
-      <h2>The 221 Etchings</h2>
-      <p class="count" id="count" aria-live="polite"></p>
+  <!-- PREVIEWS -->
+  <section class="previews" id="previews">
+    <div class="previews-head">
+      <p class="eyebrow">A glimpse</p>
+      <h2>Five of the 221</h2>
+      <p class="muted">The rest stay in the dark until the order opens.</p>
     </div>
-    <div class="filters" role="group" aria-label="Filter the etchings">
-      <label>Style <select id="fStyle"><option value="">All</option></select></label>
-      <label>Effect <select id="fEffect"><option value="">All</option></select></label>
-      <label>Palette <select id="fPalette"><option value="">All</option></select></label>
-      <button class="btn small" id="reset" type="button">Reset</button>
+    <div class="row">
+      <figure class="card">
+        <img src="/img/105.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Dogma-Skulls etching: The Ember">
+        <figcaption>The Ember</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/img/21.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Dogma-Skulls etching: The Offering">
+        <figcaption>The Offering</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/img/86.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Dogma-Skulls etching: The Paper Skull">
+        <figcaption>The Paper Skull</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/img/49.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Dogma-Skulls etching: The Frost">
+        <figcaption>The Frost</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/img/14.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Dogma-Skulls etching: The Midnight">
+        <figcaption>The Midnight</figcaption>
+      </figure>
     </div>
-    <div class="grid" id="grid"></div>
-    <p class="empty" id="empty" hidden>No etching matches those filters.</p>
   </section>
 
   <!-- 1/1 -->
@@ -205,18 +218,6 @@
   <span class="links" id="links"></span>
 </footer>
 
-<dialog id="lightbox" aria-label="Etching viewer">
-  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
-  <button class="lb-nav prev" id="lbPrev" aria-label="Previous etching">&#8249;</button>
-  <figure>
-    <img id="lbImg" alt="" width="400" height="400">
-    <figcaption>
-      <strong id="lbTitle"></strong>
-      <span id="lbTraits"></span>
-    </figcaption>
-  </figure>
-  <button class="lb-nav next" id="lbNext" aria-label="Next etching">&#8250;</button>
-</dialog>
 
 <script src="/config.js"></script>
 <script src="/app.js"></script>
