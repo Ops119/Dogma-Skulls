@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "dogma-skulls",
+  "name": "dogma-skulls-btc",
   "compatibility_date": "2026-10-01",
   // Static site: everything in the repo root is served as assets (see .assetsignore)
   "assets": {

@@ -15,3 +15,5 @@ node_modules/
 !/img/49.jpg
 !/img/86.jpg
 !/img/105.jpg
+/flame/
+/scripts/

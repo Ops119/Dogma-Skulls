@@ -1,0 +1,40 @@
+name: Flame count
+
+on:
+  schedule:
+    # Every 6 hours; the script only counts once a week, in a hidden random slot
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Count now, even if this week was already counted
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency: flame-count
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Count Flame
+        env:
+          FLAME_SALT: ${{ secrets.FLAME_SALT }}
+          ORD_URL: ${{ vars.ORD_URL }}
+        run: node scripts/flame-count.mjs ${{ inputs.force && '--force' || '' }}
+      - name: Publish
+        run: |
+          git add flame.json flame/
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Flame count $(date -u +%F)"
+          git push
