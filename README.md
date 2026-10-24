@@ -1,21 +1,38 @@
 # Dogma-Skulls
 
-Static site for Dogma-Skulls: 221 geometric Bitcoin skull etchings plus the Prime Skull 1/1.
+*Bitcoin skulls, etched into the Divine.*
 
-No build step. Deployed on Cloudflare (Workers static assets) from `main`: `wrangler.jsonc` serves the repository root, minus what `.assetsignore` lists. Local preview: `npx wrangler dev`.
+221 geometric Bitcoin skull etchings in black, white and orange, plus one 1/1 Prime Skull.
+This repo is the project website: a single self-contained page (`index.html`) with the
+lore, five previews and the **Flame** soft-staking rewards.
 
-## Layout
+- Discord: https://discord.gg/45fr4KVn
+- Telegram: https://t.me/Its_Hexveil
+- X chat: https://x.com/i/chat/group_join/g2113898521510236257/j8NEC8AR1s
 
-- `index.html`, `styles.css`, `app.js` – the site (hero, lore, five previews, Flame, join links, FAQ)
-- `config.js` – site settings: mint status/date/URLs, social links. Edit and redeploy.
-- `data.json` – traits (palette, style, effect) for the 221 etchings; kept for the reveal, not published
-- `img/` – `1.jpg`–`221.jpg` (400×400) and `featured-1of1.jpg`. Only the five previews (#105, #21, #86, #49, #14) are published; `.assetsignore` holds back the rest, including the Prime Skull
-- `_headers` – Cloudflare Pages security and cache headers
-- `404.html`, `robots.txt`, icons and `og-image.jpg` (made from preview #105)
-- `teaser.html` – self-contained single-file teaser page (images inlined), served at `/teaser`
+## Host it
 
-## Before launch
+**GitHub Pages**
+1. Push this folder to a GitHub repository.
+2. Settings → Pages → *Deploy from a branch* → branch `main`, folder `/ (root)` → Save.
+3. Your site goes live at `https://<your-username>.github.io/<repo-name>/`.
 
-- Replace `https://example.com` in the `og:image` / `twitter:image` tags in `index.html` with the real domain.
-- Fill in the FAQ answer "Which piece will I get?".
-- Set `xUrl`, `mintUrl`, `allowlistUrl`, `marketplaceUrl` in `config.js` when available.
+**Cloudflare**
+- *Drag and drop:* Workers & Pages → Create application → Get started → Drag and drop
+  your files → upload this folder (or the `index.html` file) → Deploy.
+- *From GitHub:* connect the repo, leave the build command empty and set the output
+  directory to `/`.
+
+## Edit it
+
+Everything lives in `index.html`: the lore is in the `lore` section, the reward rates are
+in the `flame` section, and the buttons link to the Discord, Telegram and X chat above.
+The page has no prices, no trackers and nothing to build.
+
+*Flame points have no cash value and cannot be traded or sold. Rates and rewards may change.*
+
+## Also in this repo
+
+- `wrangler.jsonc` and `.assetsignore` – the current Cloudflare Workers static-assets deploy from `main` (`npx wrangler dev` to preview locally).
+- `_headers`, `404.html`, `robots.txt` – security headers, not-found page and crawler rules for that deploy.
+- `img/` and `data.json` – the 221 etchings, the Prime Skull and their traits, kept for the reveal. `.assetsignore` keeps everything except the five previews unpublished; the page itself doesn't load them, since its images are inlined.

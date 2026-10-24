@@ -6,6 +6,7 @@ README.md
 node_modules/
 .wrangler/
 .gitignore
+.nojekyll
 # Unrevealed etchings and the Prime Skull: only the five previews are published
 /data.json
 /img/*
