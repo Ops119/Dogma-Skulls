@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dogma-Skulls — Bitcoin skulls, etched into the Divine</title>
+<meta name="description" content="Dogma-Skulls: 221 geometric Bitcoin skull etchings in black, white and orange, plus one Prime Skull 1/1.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Social previews: replace https://example.com with your real domain after you connect one -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dogma-Skulls — Bitcoin skulls, etched into the Divine">
+<meta property="og:description" content="221 geometric Bitcoin skull etchings, plus one Prime Skull 1/1.">
+<meta property="og:image" content="https://example.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://example.com/og-image.jpg">
+
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="Back to top">
+    <img src="/favicon.png" width="32" height="32" alt="">
+    <span data-site="name">DOGMA-SKULLS</span>
+  </a>
+  <nav aria-label="Primary">
+    <a href="#lore">Dogma</a>
+    <a href="#gallery">Etchings</a>
+    <a href="#oneofone">Prime</a>
+    <a href="#flame">Flame</a>
+    <a href="#mint">Join</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Bitcoin · Skulls · Etched</p>
+      <h1><span data-site="name">DOGMA-SKULLS</span></h1>
+      <p class="lede" data-site="tagline">Bitcoin skulls, etched into the Divine.</p>
+      <div class="cta">
+        <a class="btn primary" href="#lore">Read the Dogma</a>
+        <a class="btn" href="#gallery">See the 221 etchings</a>
+      </div>
+      <dl class="stats">
+        <div><dt>Etchings</dt><dd id="statSupply">221</dd></div>
+        <div><dt>Prime</dt><dd>1</dd></div>
+        <div><dt>Chain</dt><dd>Bitcoin</dd></div>
+      </dl>
+    </div>
+    <div class="hero-art">
+      <img src="/img/featured-1of1.jpg" width="1024" height="1024" alt="The Prime Skull: a geometric skull with a Bitcoin coin on its brow, inside a ringed border" fetchpriority="high">
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true"><div class="strip-track" id="stripTrack"></div></div>
+
+  <!-- LORE -->
+  <section class="lore" id="lore">
+    <p class="eyebrow">The lore</p>
+    <h2>The Dogma</h2>
+    <blockquote class="pull">Everything fades.<br>What is etched remains.</blockquote>
+
+    <div class="chapters">
+      <article>
+        <span class="num">I</span>
+        <h3>The Void</h3>
+        <p>Before the first block there was only the void: black, silent, unmarked. Then a single orange spark was struck into the dark, and the void learned what it meant to be written on.</p>
+      </article>
+      <article>
+        <span class="num">II</span>
+        <h3>The Etching</h3>
+        <p>The Dogma holds that nothing true is merely spoken. It is etched. Line by line, proof by proof, each mark is carved into the chain and stacked on the last, never to be unwritten. The skulls are those marks, given a face.</p>
+      </article>
+      <article>
+        <span class="num">III</span>
+        <h3>The Skull</h3>
+        <p>Bone is what remains when everything else is stripped away: no title, no mask, no promise. The order chose the skull as its sigil because it is honest. It is the one face every holder will one day share, and the one face no one can counterfeit. Cut into facets, it becomes geometry: the divine made visible as angles and orbits.</p>
+      </article>
+      <article>
+        <span class="num">IV</span>
+        <h3>The Coin</h3>
+        <p>Set into the brow is the coin, the third eye of the order. It does not watch the living. It keeps the count. Two hundred and twenty-one skulls were drawn from the first light, each wearing the flame differently. One was set apart: the Prime Skull, the source from which all the others burn.</p>
+      </article>
+    </div>
+
+    <div class="tenets">
+      <h3>The Tenets</h3>
+      <ol>
+        <li><strong>The skull is whole.</strong><span>Never broken, never turned away.</span></li>
+        <li><strong>Orange is flame. White is bone. Black is the void.</strong><span>Three colours. Everything else is an offering.</span></li>
+        <li><strong>What is etched is never erased.</strong><span>Permanence is the only prayer.</span></li>
+        <li><strong>Many faces. One Dogma.</strong><span>221 etchings, one faith, one Prime.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-head">
+      <h2>The 221 Etchings</h2>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter the etchings">
+      <label>Style <select id="fStyle"><option value="">All</option></select></label>
+      <label>Effect <select id="fEffect"><option value="">All</option></select></label>
+      <label>Palette <select id="fPalette"><option value="">All</option></select></label>
+      <button class="btn small" id="reset" type="button">Reset</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No etching matches those filters.</p>
+  </section>
+
+  <!-- 1/1 -->
+  <section class="one" id="oneofone">
+    <div class="one-art"><img src="/img/featured-1of1.jpg" width="1024" height="1024" loading="lazy" alt="The Prime Skull, the one-of-one"></div>
+    <div class="one-text">
+      <p class="eyebrow">Edition of one</p>
+      <h2>The Prime Skull</h2>
+      <p>Ringed, glowing and alone. The Prime Skull is the first light of the order, the source the other 221 burn from. There is only one, and it will never be etched again.</p>
+      <p class="muted" id="oneNote"></p>
+      <a class="btn primary" id="oneBtn" href="#mint" hidden>View the Prime Skull</a>
+    </div>
+  </section>
+
+  <section class="flame" id="flame">
+    <p class="eyebrow">Soft staking</p>
+    <h2>Tend the Flame</h2>
+    <p class="flame-lede">Hold your skull in your own wallet. Nothing to lock, send or sign. Every week, each skull you hold earns <strong>Flame</strong>.</p>
+
+    <ol class="steps">
+      <li><b>1</b><strong>Hold</strong><span>Keep your etchings in your own wallet. They never leave it.</span></li>
+      <li><b>2</b><strong>Earn</strong><span>Each week we check who still holds, and Flame is added.</span></li>
+      <li><b>3</b><strong>Spend</strong><span>Trade Flame for access, entries and a voice in the order.</span></li>
+    </ol>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>How Flame is earned</h3>
+        <ul>
+          <li><span>Each skull held</span><b>1,000 / week</b></li>
+          <li><span>Loyalty streak</span><b>up to 1.5&times;</b></li>
+          <li><span>Hold 3 / 5 / 10 skulls</span><b>+10 / 20 / 30%</b></li>
+          <li><span>Hold the Prime Skull</span><b>5,000 / week</b></li>
+          <li><span>Join the Discord or X chat</span><b>2,500 each</b></li>
+          <li><span>Bring a friend who joins</span><b>5,000</b></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>What Flame unlocks</h3>
+        <ul>
+          <li><span>Free mint raffle ticket</span><b>5,000</b></li>
+          <li><span>Vote on lore and drops</span><b>2,500</b></li>
+          <li><span>Allowlist spot</span><b>30,000</b></li>
+          <li><span>Prime Skull auction access</span><b>100,000</b></li>
+          <li><span>Discord ranks</span><b>automatic</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="ranks-title">The Ranks</h3>
+    <div class="ranks">
+      <div><strong>Spark</strong><span>0+</span></div>
+      <div><strong>Ember</strong><span>10,000+</span></div>
+      <div><strong>Flame</strong><span>50,000+</span></div>
+      <div class="top"><strong>Inferno</strong><span>150,000+</span></div>
+    </div>
+    <p class="fine">Flame has no cash value and cannot be traded or sold. Rates and rewards may change as the order grows.</p>
+  </section>
+
+  <!-- JOIN -->
+  <section class="mint" id="mint">
+    <p class="eyebrow">The order</p>
+    <h2>Join the Order</h2>
+    <p class="muted" id="mintDate"></p>
+    <div class="cta center">
+      <a class="btn primary" id="mintBtn" href="#">Mint</a>
+      <a class="btn" id="allowBtn" href="#" hidden>Join the allowlist</a>
+      <a class="btn discord" id="discordBtn" href="#" hidden>Join the Discord</a>
+      <a class="btn discord" id="telegramBtn" href="#" hidden>Message on Telegram</a>
+      <a class="btn discord" id="xChatBtn" href="#" hidden>Join the X Chat</a>
+    </div>
+    <p class="fine">Details on when and how to mint will be shared here first.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <h2>FAQ</h2>
+    <details><summary>What is Dogma-Skulls?</summary><p>A Bitcoin-themed collection of 221 geometric skull etchings in black, white and orange, plus one 1/1 called the Prime Skull.</p></details>
+    <details><summary>How many are there?</summary><p>221 etchings, plus the Prime Skull as a separate 1/1.</p></details>
+    <details><summary>Why are the images so small?</summary><p>Each etching is a 400&times;400 image kept deliberately light, so it is practical to etch onto Bitcoin.</p></details>
+    <details><summary>Which piece will I get?</summary><p>Edit this answer to match how your mint works (random, chosen, or revealed after minting).</p></details>
+    <details><summary>Where can I trade them?</summary><p id="faqMarket">Secondary market details will be shared at launch.</p></details>
+    <details><summary>Is this financial advice?</summary><p>No. Digital collectibles can lose value, and you should only spend what you are comfortable losing.</p></details>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>&copy; <span id="year"></span> <span data-site="name">DOGMA-SKULLS</span></span>
+  <span class="links" id="links"></span>
+</footer>
+
+<dialog id="lightbox" aria-label="Etching viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous etching">&#8249;</button>
+  <figure>
+    <img id="lbImg" alt="" width="400" height="400">
+    <figcaption>
+      <strong id="lbTitle"></strong>
+      <span id="lbTraits"></span>
+    </figcaption>
+  </figure>
+  <button class="lb-nav next" id="lbNext" aria-label="Next etching">&#8250;</button>
+</dialog>
+
+<script src="/config.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
