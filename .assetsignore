@@ -6,7 +6,7 @@ README.md
 node_modules/
 .wrangler/
 .gitignore
-# Unrevealed etchings: only the five previews and the Prime Skull are published
+# Unrevealed etchings and the Prime Skull: only the five previews are published
 /data.json
 /img/*
 !/img/14.jpg
@@ -14,4 +14,3 @@ node_modules/
 !/img/49.jpg
 !/img/86.jpg
 !/img/105.jpg
-!/img/featured-1of1.jpg

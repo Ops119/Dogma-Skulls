@@ -38,16 +38,15 @@ section{max-width:var(--max);margin:0 auto;padding:clamp(48px,9vw,96px) var(--gu
 .btn:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center;padding-top:clamp(32px,6vw,72px)}
-.lede{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:34ch}
+.hero{position:relative;isolation:isolate;text-align:center;padding-top:clamp(64px,12vw,140px);padding-bottom:clamp(40px,7vw,80px)}
+.hero::before{content:"";position:absolute;left:50%;top:42%;width:min(760px,95vw);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(255,122,0,.30),rgba(255,122,0,0) 66%);filter:blur(30px)}
+.lede{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:34ch;margin-inline:auto}
+.hero .cta{justify-content:center}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin:1.6rem 0 2rem}
 .cta.center{justify-content:center}
-.stats{display:flex;gap:clamp(20px,5vw,48px);margin:0;padding-top:1.4rem;border-top:1px solid var(--line)}
+.stats{display:flex;justify-content:center;max-width:420px;gap:clamp(20px,5vw,48px);margin:0 auto;padding-top:1.4rem;border-top:1px solid var(--line)}
 .stats dt{font:600 .7rem/1 ui-monospace,Menlo,monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
 .stats dd{margin:0;font-size:1.5rem;font-weight:800}
-.hero-art{position:relative;isolation:isolate}
-.hero-art::before{content:"";position:absolute;inset:6%;z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(255,122,0,.42),rgba(255,122,0,0) 68%);filter:blur(28px)}
-.hero-art img{border-radius:50%;box-shadow:0 0 0 1px #2a1a08,0 30px 80px rgba(0,0,0,.7)}
 
 /* lore */
 .lore{max-width:900px}
@@ -85,8 +84,6 @@ section{max-width:var(--max);margin:0 auto;padding:clamp(48px,9vw,96px) var(--gu
 .card figcaption{padding:10px 12px;text-align:center;font:600 .72rem/1.2 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 /* 1/1 */
-.one{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px);align-items:center}
-.one-art img{border-radius:50%;box-shadow:0 0 0 1px #2a1a08,0 0 90px rgba(255,122,0,.22)}
 
 /* mint */
 .mint{text-align:center;max-width:860px}
@@ -114,11 +111,7 @@ details p{color:var(--muted);padding-bottom:12px}
 /* lightbox */
 
 @media (max-width:820px){
-  .hero,.one{grid-template-columns:1fr}
-  .hero-art{order:-1;max-width:420px;margin:0 auto}
-  .one-art{max-width:380px;margin:0 auto}
   .pillars{grid-template-columns:1fr}
-  .nav nav a:nth-child(2){display:none}
 }
 
 /* flame / soft staking */

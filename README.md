@@ -6,12 +6,12 @@ No build step. Deployed on Cloudflare (Workers static assets) from `main`: `wran
 
 ## Layout
 
-- `index.html`, `styles.css`, `app.js` – the site (hero, lore, five previews, Prime Skull, Flame, join links, FAQ)
-- `config.js` – site settings: mint status/date/URLs, social links, Prime Skull state. Edit and redeploy.
+- `index.html`, `styles.css`, `app.js` – the site (hero, lore, five previews, Flame, join links, FAQ)
+- `config.js` – site settings: mint status/date/URLs, social links. Edit and redeploy.
 - `data.json` – traits (palette, style, effect) for the 221 etchings; kept for the reveal, not published
-- `img/` – `1.jpg`–`221.jpg` (400×400) and `featured-1of1.jpg`. Only the five previews (#105, #21, #86, #49, #14) and the Prime Skull are published; `.assetsignore` holds back the rest
+- `img/` – `1.jpg`–`221.jpg` (400×400) and `featured-1of1.jpg`. Only the five previews (#105, #21, #86, #49, #14) are published; `.assetsignore` holds back the rest, including the Prime Skull
 - `_headers` – Cloudflare Pages security and cache headers
-- `404.html`, `robots.txt`, icons, `og-image.jpg`
+- `404.html`, `robots.txt`, icons and `og-image.jpg` (made from preview #105)
 - `teaser.html` – self-contained single-file teaser page (images inlined), served at `/teaser`
 
 ## Before launch

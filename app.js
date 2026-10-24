@@ -52,15 +52,6 @@
     $("faqMarket").textContent = "On the secondary market — see the marketplace link in the footer.";
   }
 
-  // 1/1
-  const one = S.oneOfOne || {};
-  $("oneNote").textContent = one.note || "";
-  if (one.url) {
-    const b = $("oneBtn");
-    b.href = one.url; b.hidden = false; b.target = "_blank"; b.rel = "noopener noreferrer";
-    b.textContent = one.state === "sold" ? "See the sale" : "View the Prime Skull";
-  }
-
   // footer links
   const links = $("links");
   [["X", S.xUrl], ["Discord", S.discordUrl], ["Telegram", S.telegramUrl], ["X Chat", S.xChatUrl], ["Marketplace", S.marketplaceUrl]].forEach(([t, u]) => {

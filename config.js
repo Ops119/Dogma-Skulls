@@ -22,12 +22,5 @@ window.SITE = {
   xUrl: "",             // https://x.com/yourhandle
   discordUrl: "https://discord.gg/45fr4KVn",
   telegramUrl: "https://t.me/Its_Hexveil",
-  xChatUrl: "https://x.com/i/chat/group_join/g2113898521510236257/j8NEC8AR1s",
-
-  oneOfOne: {
-    // "auction" | "reserved" | "sold"
-    state: "auction",
-    note: "The Prime Skull will be offered separately. Details revealed at launch.",
-    url: ""
-  }
+  xChatUrl: "https://x.com/i/chat/group_join/g2113898521510236257/j8NEC8AR1s"
 };
