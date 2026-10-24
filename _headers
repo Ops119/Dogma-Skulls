@@ -12,3 +12,6 @@
 
 /*.js
   Cache-Control: public, max-age=3600
+
+/flame.json
+  Cache-Control: public, max-age=300
