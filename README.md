@@ -31,24 +31,28 @@ The page has no prices, no trackers and nothing to build.
 
 ### Flame leaderboard
 
-The leaderboard under the ranks reads `flame.json` from the site root. After each weekly
-count, replace its contents and push to `main`:
+The leaderboard under the ranks reads `flame.json`. A GitHub Action
+(`.github/workflows/flame.yml`) rewrites it once a week and pushes it to `main`, which deploys it.
 
-```json
-{
-  "updated": "2026-11-02",
-  "holders": [
-    { "wallet": "bc1p...", "name": "optional display name", "skulls": 3, "flame": 12500 }
-  ]
-}
-```
+**How the count works** (`scripts/flame-count.mjs`, Node 20, no dependencies)
+- Reads the owner of every skull from a free Ordinals indexer: `ordinals.com` by default, no key needed.
+  To use another, set the repo variable `ORD_URL`, e.g. `https://api.hiro.so/ordinals/v1/inscriptions/{id}`.
+- Each wallet earns 1,000 per skull and 5,000 for the Prime Skull, +10/20/30% for holding 3/5/10 skulls,
+  times a streak multiplier: 1.0 the first week, +0.1 for each week held in a row, up to 1.5.
+  A wallet holding nothing at a count loses its streak.
+- The board ranks by lifetime Flame earned. Ties go to the longer streak, then to whoever held first.
+- The Action wakes every 6 hours but only counts once a week, in a hidden 6-hour slot picked from the
+  week number and the `FLAME_SALT` secret. Set that secret to any random text so the slot can't be guessed.
+  *Actions → Flame count → Run workflow* with "force" counts immediately.
 
-Holders are sorted by `flame`; the top 25 are shown, and anyone can search for their
-wallet or name to see their place. Ranks (Spark, Ember, Flame, Inferno) are worked out
-from the thresholds on the page. While `holders` is empty, the page shows a
-"first count after the gates open" note instead.
-
-*Flame points have no cash value and cannot be traded or sold. Rates and rewards may change.*
+**Files to edit in `flame/`**
+- `inscriptions.json` – the 221 skull inscription IDs in `skulls` and the Prime's in `prime`. Fill it at mint.
+  While `skulls` is empty nothing is counted and the board shows its "first count" note.
+- `exclude.json` – team, treasury and marketplace wallets to leave off the board, e.g. `["bc1p..."]`.
+- `bonuses.json` – one-off Flame added on top, never multiplied:
+  `[{ "wallet": "bc1p...", "flame": 2500, "reason": "Discord" }]`.
+- `names.json` – opt-in display names: `{ "bc1p...": "Hexveil" }`.
+- `state.json` and `history/` are written by the count. Leave them alone; each history file is that week's holdings.
 
 ## Also in this repo
 
