@@ -2,7 +2,7 @@
 
 Static site for Dogma-Skulls: 221 geometric Bitcoin skull etchings plus the Prime Skull 1/1.
 
-No build step. Deploy the repository root as-is (Cloudflare Pages: framework preset "None", build command empty, output directory `/`).
+No build step. Deployed on Cloudflare (Workers static assets) from `main`: `wrangler.jsonc` serves the repository root, minus what `.assetsignore` lists. Local preview: `npx wrangler dev`.
 
 ## Layout
 
